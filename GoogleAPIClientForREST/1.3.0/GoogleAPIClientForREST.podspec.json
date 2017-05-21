@@ -25,7 +25,7 @@
     "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) GTLR_HAS_SESSION_UPLOAD_FETCHER_IMPORT=1"
   },
   "dependencies": {
-    "GTMSessionFetcher": [
+   "GTMSessionFetcher": [
       ">= 1.1.7"
     ]
   },
