@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 #     'Sources/F53OSC/*.{h,m}',
 #     'Sources/Vendor/CocoaAsyncSocket/*.{h,m}',
 #   ]
-  s.source_files = '*.{h,m}'
+  s.source_files = 'Sources/F53OSC/*.{h,m}'
   s.requires_arc = true
 
   s.exclude_files = "MetatoneNetworkManager*.{h,m}", "GCD*.{h,m}"
