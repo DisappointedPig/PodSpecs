@@ -21,11 +21,17 @@ Pod::Spec.new do |s|
   s.platforms     = { :ios => '8.4', :tvos => '9.0', :osx => '10.9' }
 #  s.source        = { :git => 'https://github.com/Figure53/F53OSC.git', :tag => "#{s.version}", }
   s.source       = { :git => "https://github.com/jkonopka/F53OSC.git", :tag => "v#{s.version}" }  
+#   s.requires_arc = true
+#   s.source_files = [
+#     'Sources/F53OSC/*.{h,m}',
+#     'Sources/Vendor/CocoaAsyncSocket/*.{h,m}',
+#   ]
+  s.source_files = '*.{h,m}'
   s.requires_arc = true
-  s.source_files = [
-    'Sources/F53OSC/*.{h,m}',
-    'Sources/Vendor/CocoaAsyncSocket/*.{h,m}',
-  ]
+
+  s.exclude_files = "MetatoneNetworkManager*.{h,m}", "GCD*.{h,m}"
   
   s.frameworks = 'Security', 'CFNetwork'
+  s.dependency "CocoaAsyncSocket"
+  
 end
